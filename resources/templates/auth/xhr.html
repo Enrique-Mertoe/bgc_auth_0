@@ -1,0 +1,171 @@
+{% if step ==1 or not step %}
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="smv-form-floating">
+                <input name="smv-f-name" type="text" placeholder="first name"
+                       class="form-control">
+                <label>First Name</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="smv-form-floating">
+                <input type="text" name="smv-l-name" placeholder="last name"
+                       class="form-control">
+                <label>Last Name</label>
+            </div>
+        </div>
+
+    </div>
+{% elif step == 2 %}
+    <div class="row">
+        <div class="col">
+            <div class="smv-form-floating">
+                <input type="email" placeholder="Email" name="smv-email" class="form-control">
+                <label>Email</label>
+            </div>
+        </div>
+    </div>
+{% elif step == 3 %}
+    <div class="row">
+        <div class="col">
+            <div class="vstack">
+                <div class="mb-4 form-inputs pointer hstack">
+                    <div class="hstack px-2">
+                        <svg width="24" height="24" viewBox="0 0 36 36"
+                             xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+                             class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"
+                             fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                               stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill="#060"
+                                      d="M36 27a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v18z"></path>
+                                <path fill="#BB1600" d="M0 13h36v10H0z"></path>
+                                <path fill="#141414" d="M32 5H4a4 4 0 0 0-4 4v4h36V9a4 4 0 0 0-4-4z"></path>
+                                <path fill="#EEE" d="M0 13h36v1H0zm0 9h36v1H0z"></path>
+                                <path fill="#141414"
+                                      d="M23.054 9.404c-.066-.039-.186.089-.794.764c-.216.24-.486.539-.785.86c-.608.653-1.244 1.461-.783 1.935l-7.265 12.211c-.011.018-.019.047.003.087a.432.432 0 0 0 .294.177h.003c.046 0 .068-.021.079-.039l7.268-12.215c.626.148 1.024-.784 1.305-1.616c.14-.417.274-.796.381-1.1c.302-.856.356-1.027.294-1.064z"></path>
+                                <path fill="#FFF"
+                                      d="M22.305 10.208c-.216.24-.486.539-.786.861c-.886.952-1.124 1.528-.769 1.868l.018.016l-7.29 12.252c-.004.008.001.021.005.027a.378.378 0 0 0 .242.145h.002c.01 0 .023-.001.028-.01l7.279-12.234l.012-.02l.022.006c.458.13.846-.355 1.254-1.572c.14-.417.274-.796.381-1.101c.168-.475.314-.889.314-.984c-.082.046-.375.372-.712.746z"></path>
+                                <path fill="#141414"
+                                      d="M15.308 12.963c.461-.474-.174-1.282-.783-1.935c-.299-.322-.569-.62-.785-.86c-.608-.674-.728-.803-.794-.764c-.062.038-.008.208.293 1.063c.107.304.241.683.381 1.1c.28.833.678 1.764 1.305 1.616l7.268 12.215c.011.018.033.039.079.039h.003a.432.432 0 0 0 .294-.177c.021-.04.014-.069.003-.087l-7.264-12.21z"></path>
+                                <path fill="#FFF"
+                                      d="M15.25 12.937c.355-.34.118-.916-.769-1.868c-.3-.322-.569-.621-.786-.861c-.337-.374-.631-.7-.714-.745c0 .095.146.509.314.984c.107.305.242.684.381 1.101c.409 1.217.796 1.702 1.254 1.572l.022-.006l.012.02l7.279 12.234c.005.009.019.01.028.01h.002a.374.374 0 0 0 .242-.145c.004-.007.009-.02.005-.027l-7.29-12.252l.02-.017z"></path>
+                                <path fill="#141414"
+                                      d="M18.018 10.458L18 10.444l-.018.014c-2.492 1.87-3.704 4.331-3.704 7.523s1.211 5.653 3.704 7.524l.018.013l.018-.013c2.492-1.87 3.704-4.331 3.704-7.524s-1.212-5.655-3.704-7.523z"></path>
+                                <path fill="#BB1600"
+                                      d="M20.879 14.059c-.603-1.363-1.551-2.54-2.88-3.54c-1.326.999-2.273 2.174-2.877 3.533c.525 1.181.782 2.468.782 3.937c0 1.467-.256 2.751-.779 3.928c.604 1.356 1.55 2.529 2.873 3.527c1.326-.999 2.273-2.174 2.876-3.534c-.521-1.178-.776-2.461-.776-3.921c.002-1.462.258-2.747.781-3.93z"></path>
+                                <path d="M18 18.927c.306 0 .555-.424.555-.946s-.249-.947-.555-.947c-.306 0-.554.424-.554.947c-.001.522.248.946.554.946zm-.231-2.497c-.502-.739-.746-1.677-.746-2.821c0-1.145.244-2.083.746-2.823v5.644zm.462 0c.501-.739.744-1.677.744-2.821c0-1.145-.243-2.083-.744-2.823v5.644zm-.462 3.1c-.502.738-.746 1.677-.746 2.821c0 1.146.244 2.082.746 2.822V19.53zm.462 0c.501.738.744 1.677.744 2.821c0 1.146-.243 2.082-.744 2.822V19.53z"
+                                      fill="#FFF"></path>
+                            </g>
+                        </svg>
+                        <span class="form-control">Kenya</span>
+                    </div>
+                </div>
+                <div class="mb-4 form-inputs form-phone hstack">
+                    <span>+</span>
+                    <input maxlength="3" value="254" name="code" class="form-control form-tel_code"
+                           type="tel"
+                           placeholder="254">
+                    <input name="phone" autofocus class="form-control" type="tel" placeholder="000 000 000">
+                </div>
+            </div>
+        </div>
+    </div>
+{% elif step ==4 %}
+    <div class="row gy-3">
+        <div class="col">
+            <div class="smv-form-floating">
+                <input type="text" placeholder="Business Name" name="smv-b-name" class="form-control">
+                <label>Business Name</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col">
+                    <div class="smv-form-floating">
+                        <input type="text" placeholder="DD" name="smv-dday" class="form-control">
+                        <label>DDD</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="smv-form-floating">
+                        <input type="text" placeholder="MM" name="smv-dmonth" class="form-control">
+                        <label>MM</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="smv-form-floating">
+                        <input type="text" placeholder="YYYY" name="smv-dyear" class="form-control">
+                        <label>YYYY</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% elif step == 5 %}
+    <div class="row g-4">
+        <span class="fw-bold py-2">Select gender</span>
+        <div class="col">
+            <label class="card py-3 form-check hstack justify-content-center gap-3">
+                <span>Male</span>
+                <span>
+                   <input value="male" type="radio" class="" name="smv-gender">
+                </span>
+            </label>
+        </div>
+        <div class="col">
+            <label class="card py-3 form-check hstack justify-content-center gap-3">
+                <span>Female</span>
+                <span>
+                   <input value="female" type="radio" class="" name="smv-gender">
+               </span>
+            </label>
+        </div>
+        <div class="col">
+            <label class="card py-3 form-check hstack justify-content-center gap-3">
+                <span>Other</span>
+                <span>
+                   <input value="other" type="radio" class="" name="smv-gender">
+               </span>
+            </label>
+        </div>
+    </div>
+{% elif step == 6 %}
+    <div class="row gy-3">
+        <div class="col">
+            <div class="smv-form-floating">
+                <span class="smv-password-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-eye-slash" viewBox="0 0 16 16">
+                      <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7 7 0 0 0-2.79.588l.77.771A6 6 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755q-.247.248-.517.486z"></path>
+                      <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829"></path>
+                      <path d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z"></path>
+                    </svg>
+                </span>
+                <input type="password" placeholder="Password" name="smv-password" class="form-control">
+                <label>Password</label>
+
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="smv-form-floating">
+                <span class="smv-password-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-eye-slash" viewBox="0 0 16 16">
+                      <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7 7 0 0 0-2.79.588l.77.771A6 6 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755q-.247.248-.517.486z"></path>
+                      <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829"></path>
+                      <path d="M3.35 5.47q-.27.24-.518.487A13 13 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7 7 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709zm10.296 8.884-12-12 .708-.708 12 12z"></path>
+                    </svg>
+                </span>
+                <input type="password" placeholder="Confirm Password" name="smv-c-password" class="form-control">
+                <label>Confirm Password</label>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endif %}

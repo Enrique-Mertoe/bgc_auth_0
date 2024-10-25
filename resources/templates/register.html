@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}
+    Create Account
+{% endblock %}
+{% block auth %}
+    <div class="container auth-container">
+        <div class="row w-100 justify-content-center">
+            <div class="col-md-8">
+                <div class="vstack card auth-card">
+                    <img class="mx-auto" src="{{ theme.logo }}" width="250" alt="">
+                    <h2 class="mb-4 mx-auto">Sign up</h2>
+                    <div class="auth-forms">
+                        <form action="{{ url_for('main.register') }}" method="post"
+                              class="mb-5 col-md-8 mx-auto form-groupy vstack">
+
+                            <div class="mb-3 smv-groupy-content">
+                                {% include "auth/xhr.html" %}
+                            </div>
+                            <div class="hstack justify-content-between">
+                                <div class="smv-form-errors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                         fill="currentColor"
+                                         viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                                    </svg>
+                                    <span>ddd</span>
+                                </div>
+                                <button class="btn p-1 ms-auto btn-primary form-submit btn-rounded" type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                                         class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                    </svg>
+                                    <span class="spinner-border"></span>
+                                </button>
+                            </div>
+                            <a class="text-decoration-none" href="/auth/login">Login</a>
+                        </form>
+                    </div>
+                </div>
+                {% include "auth/auth_footer.html" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+    Password Reset
+{% endblock %}
+{% block auth %}
+    <div class="container-lg  auth-container">
+        <div class="row w-100  justify-content-center">
+            <div class="col-md-8">
+                <div class="vstack card auth-card">
+                    <img class="mx-auto" src="{{ theme.logo }}" width="250" alt="">
+                    <h2 class="mb-4 mx-auto">Recovery</h2>
+                    <div class="auth-forms">
+                        <div class="mb-5 col-md-8 mx-auto vstack">
+                            {% if success %}
+                                <div class="mb-3">
+                                    <p>
+                                        Password reset link send to {{ email_link }}
+                                    </p>
+                                </div>
+
+
+                                <div class="jc-between hstack mt-3">
+                                    <a class="text-decoration-none" href="/auth/login">Back to login</a>
+                                    <a href="/auth/login" class="btn p-1 ms-auto btn-primary" type="submit">
+                                <span class="btn-txt">
+                                    resend link
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
+                                         class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                </svg>
+                                </span>
+                                    </a>
+                                </div>
+                            {% else %}
+                                <p>Something went wrong</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
